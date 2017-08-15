@@ -12,6 +12,9 @@
 extern int externFirstVar;
 extern int externSecondVar;
 
+//use of the define pre-processor
+#define PI 3.1416
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
@@ -30,6 +33,7 @@ int main(int argc, const char * argv[]) {
         int product = firstNum * secondNum;
         float div = firstNum / secondNum;
         
+        
         NSLog(@"The sum is %d\n", sum);
         NSLog(@"The difference  is %d\n", diff);
         NSLog(@"The product is %d\n", product);
@@ -41,8 +45,14 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The value of externFirstVar is %d\n", externFirstVar);
         NSLog(@"The value of externSecondVar is %d\n", externSecondVar);
         
+        NSLog(@"The area of the circle is %f\n", 2 * PI * 9);
+        const double G = 6.67E-5;
+        NSLog(@"Universal Gravitational Constant = %f", G);
+        
         
         
     }
     return 0;
 }
+
+
