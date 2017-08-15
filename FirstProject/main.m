@@ -48,6 +48,36 @@ int main(int argc, const char * argv[]) {
         const double G = 6.67E-5;
         NSLog(@"Universal Gravitational Constant = %f", G);
         
+        NSString *startingString = @"NSString creates immutable strings";
+        NSLog(@"%@", startingString);
+        
+        NSMutableString *mutableString = [NSMutableString stringWithString:@"This string is mutable"];
+        NSLog(@"%@", mutableString);
+        
+        NSMutableString *string1 =[NSMutableString stringWithString:@"This is part 1"];
+        NSMutableString *string2 = string1;
+        NSLog(@"Before appending");
+        NSLog(@"%@",string1);
+        NSLog(@"%@",string2);
+        
+        [string2 appendString:@" and this is part 2"];
+        NSLog(@"After appending");
+        NSLog(@"%@",string1);
+        NSLog(@"%@",string2);
+        
+        NSMutableString *diffString1 = [NSMutableString stringWithString:@"This is diffString1"];
+        NSMutableString *diffString2 = [NSMutableString stringWithString:diffString1]; //copying diffString1 into diffString2
+        NSLog(@"Before appending");
+        NSLog(@"%@",diffString1);
+        NSLog(@"%@",diffString2);
+        
+        [diffString2 appendString:@" and this is now joined with diffString2"];
+        NSLog(@"After appending");
+        NSLog(@"%@",diffString1);
+        NSLog(@"%@",diffString2);
+        
+        
+        
         
     }
     return 0;
