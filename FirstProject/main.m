@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Rectangle.h"
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
 extern int externFirstVar;
 extern int externSecondVar;
-
 //use of the define pre-processor
 #define PI 3.1416
 
@@ -76,12 +76,24 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@",diffString1);
         NSLog(@"%@",diffString2);
         
+        NSMutableString *mutableString1 = [NSMutableString stringWithString:@"@Mutable String 1"];
+        NSMutableString *mutableString2 = mutableString1;
+        NSLog(@"mutableString1 = %@, mutableString2 = %@", mutableString1, mutableString2);
+        [mutableString2 setString:@"mutableString2 value changed"];
+        NSLog(@"mutableString1 = %@, mutableString2 = %@", mutableString1, mutableString2);
+        NSString *test = [NSString string];
         
         
+        Rectangle *rect = [[Rectangle alloc] init];
+        [rect setHeight:4];
+        [rect setWidth:5];
         
+        NSLog(@"%d, %d", [rect height], [rect width]);
     }
     return 0;
 }
+
+
 
 
 
