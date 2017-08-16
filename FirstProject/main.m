@@ -105,6 +105,15 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", [names objectAtIndex:i]);
         }
         
+        //another way for initializing arrays
+        NSArray *animals = @[@"Cat", @"Dog", @"Rabbit"];
+        NSLog(@"The number of animals are %lu", [animals count]);
+        for(int i = 0; i < [animals count]; i++){
+            NSLog(@"Animal %d : %@", i+1,[animals objectAtIndex:i]);
+        }
+         
+        
+        
         
         
     }
