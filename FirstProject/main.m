@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Rectangle.h"
 
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
@@ -81,7 +82,21 @@ int main(int argc, const char * argv[]) {
         NSLog(@"mutableString1 = %@, mutableString2 = %@", mutableString1, mutableString2);
         [mutableString2 setString:@"mutableString2 value changed"];
         NSLog(@"mutableString1 = %@, mutableString2 = %@", mutableString1, mutableString2);
-        NSString *test = [NSString string];
+        
+        NSString *string = [[NSString alloc] initWithFormat:@"I have %d apples", 16];
+        NSLog(@"%@", string);
+        
+        //defining a new class Rectangle
+        Rectangle *rect = [[Rectangle alloc] init];
+        [rect setHeight:4 width:5];
+        NSLog(@"Width = %d Height = %d", [rect width], [rect height]);
+        NSLog(@"The area of the rectange is %d", [rect areaOfRectangle]);
+        
+        //example of the description method in the Rectangle class
+        NSLog(@"%@", [rect description]);
+        //can also be used as follows
+        // NSLog(@"%@", rect);
+        
         
         
         

@@ -10,24 +10,33 @@
 
 @implementation Rectangle
 
-- (void) setHeight:(int)newHeight {
+- (void)setHeight:(int)newHeight {
     height = newHeight;
 }
 
-- (void) setWidth:(int)newWidth {
+- (void)setWidth:(int)newWidth{
     width = newWidth;
 }
 
-- (void) setHeight:(int)newHeight width:(int)newWidth {
+- (void)setHeight:(int)newHeight width:(int)newWidth {
     height = newHeight;
     width = newWidth;
 }
 
-- (int) height {
+- (int)height{
     return height;
 }
 
-- (int) width {
+- (int)width{
     return width;
 }
+
+- (int)areaOfRectangle{
+    return height * width;
+}
+
+- (NSString *) description{
+    return @"This is the description method overridden from the NSObject superclass";
+}
+
 @end
