@@ -113,7 +113,17 @@ int main(int argc, const char * argv[]) {
         }
          
         
+        //NSDictionary
+        NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                              @"German Shephard", @"Dog",
+                              @"Shark", @"Fish",
+                              @"Broiler", @"Chicken",
+                              nil];
+        NSLog(@"%@", [dict objectForKey:@"Fish"]);
+        NSLog(@"%@", [dict objectForKey:@"Chicken"]);
+        NSLog(@"%lu", [dict count]);
         
+             
         
         
     }
