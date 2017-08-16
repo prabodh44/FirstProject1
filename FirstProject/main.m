@@ -98,6 +98,13 @@ int main(int argc, const char * argv[]) {
         // NSLog(@"%@", rect);
         
         
+        //NSArray
+        NSArray *names = [[NSArray alloc] initWithObjects:@"Prabodh", @"Ram", @"Sita", @"Hari",@"Raghav",nil];
+        
+        for(int i = 0; i < [names count]; i++){
+            NSLog(@"%@", [names objectAtIndex:i]);
+        }
+        
         
         
     }
