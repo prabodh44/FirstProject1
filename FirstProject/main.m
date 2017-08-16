@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Rectangle.h"
+
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
 extern int externFirstVar;
@@ -84,11 +84,7 @@ int main(int argc, const char * argv[]) {
         NSString *test = [NSString string];
         
         
-        Rectangle *rect = [[Rectangle alloc] init];
-        [rect setHeight:4];
-        [rect setWidth:5];
         
-        NSLog(@"%d, %d", [rect height], [rect width]);
     }
     return 0;
 }
