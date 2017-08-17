@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         
-        
+        //Aug 15th 2017
         int firstNum;
         int secondNum;
         NSLog(@"Hello World\n");
@@ -83,8 +83,10 @@ int main(int argc, const char * argv[]) {
         [mutableString2 setString:@"mutableString2 value changed"];
         NSLog(@"mutableString1 = %@, mutableString2 = %@", mutableString1, mutableString2);
         
+        //Aug 16th 2017
         NSString *string = [[NSString alloc] initWithFormat:@"I have %d apples", 16];
         NSLog(@"%@", string);
+        
         
         //defining a new class Rectangle
         Rectangle *rect = [[Rectangle alloc] init];
@@ -122,6 +124,16 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@", [dict objectForKey:@"Fish"]);
         NSLog(@"%@", [dict objectForKey:@"Chicken"]);
         NSLog(@"%lu", [dict count]);
+        
+        
+        //Aug 17th 2016
+        //Fast enumeration(similar to the foreach loop)
+        
+        NSArray *array = [NSArray arrayWithObjects:@"Prabodh", @"Tuladhar", @"Mitra", @"School", nil];
+        for(NSString *string in array){
+            NSLog(@"%@",string);
+        }
+        
         
              
         
