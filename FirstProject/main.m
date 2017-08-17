@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Rectangle.h"
 #import "Computer.h"
+#import "Animals.h"
 
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
@@ -191,12 +192,12 @@ int main(int argc, const char * argv[]) {
         
         [comp chip];
         
+        //Using @property
+        Animals *animal = [[Animals alloc] init];
+        animal.age = 8;
+        animal.height = 9;
         
-        
-        
-        
-        
-        
+        NSLog(@"Animal age: %d " ,[animal age]);
     }
     return 0;
 }

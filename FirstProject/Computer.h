@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Chip.m"
+#import "Chip.h"
 
 @interface Computer : NSObject{
     Chip *chip;

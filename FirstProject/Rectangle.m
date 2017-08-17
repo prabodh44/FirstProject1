@@ -10,10 +10,10 @@
 
 @implementation Rectangle
 
--(id) initWithHeightandWidth:(int)height width:(int)width{
+-(id) initWithHeightandWidth:(int)h width:(int)w{
     if(self = [super init]){
-        self.height = height;
-        self.width = width;
+        height = h;
+        width = w;
     }
     
     return self;

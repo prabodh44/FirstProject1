@@ -11,12 +11,12 @@
 @interface Animals : NSObject{
     int age;
     int height;
-    NSString *name;
+    
 }
 
 @property int age;
 @property int height;
-@property (retain) NSString *name;
+
 
 
 @end
