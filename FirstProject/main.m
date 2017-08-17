@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Rectangle.h"
+#import "Computer.h"
 
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
@@ -169,12 +170,31 @@ int main(int argc, const char * argv[]) {
         Rectangle *rect2 = [[Rectangle alloc] init];
         NSLog(@"%@", rect2);
         
+        //[rect2 retainCount];
+        //[rect2 retain];
+        
+        
         //using convenience initializers
         Rectangle *rect3 = [[Rectangle alloc] initWithHeightandWidth:5 width:10];
         NSLog(@"%@", rect3);
         
-        //Memory management
-        NSLog(@"Retain count of rect3: %lu", [rect3 retainCount]);
+        
+        
+        //Object ownership
+        Computer *comp = [[Computer alloc] init];
+        Chip *chip = [[Chip alloc] init];
+        
+        [comp setChip:chip];
+        
+        //[comp release] ARC forbids the explicit call to release method;
+        //relase the memory pointed by rhe comp variable
+        
+        [comp chip];
+        
+        
+        
+        
+        
         
         
     }

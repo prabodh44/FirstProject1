@@ -83,11 +83,5 @@
 
 // this is the method of the NSObject
 //which is being overridden
-- (void) dealloc {
-    NSLog(@"When the retain count reaches zerom dealloc is called");
-    NSLog(@"Memory of the object has been released");
-    
-    //[super dealloc];
-    
-}
+
 @end
