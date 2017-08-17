@@ -182,15 +182,15 @@ int main(int argc, const char * argv[]) {
         
         
         //Object ownership
-        Computer *comp = [[Computer alloc] init];
-        Chip *chip = [[Chip alloc] init];
-        
-        [comp setChip:chip];
+//        Computer *comp = [[Computer alloc] init];
+//        Chip *chip = [[Chip alloc] init];
+//        
+//        [comp setChip:chip];
         
         //[comp release] ARC forbids the explicit call to release method;
         //relase the memory pointed by rhe comp variable
         
-        [comp chip];
+        //[comp chip];
         
         //Using @property
         Animals *animal = [[Animals alloc] init];
@@ -198,6 +198,7 @@ int main(int argc, const char * argv[]) {
         animal.height = 9;
         
         NSLog(@"Animal age: %d " ,[animal age]);
+        NSLog(@"Animal height: %d", [animal height]);
     }
     return 0;
 }
