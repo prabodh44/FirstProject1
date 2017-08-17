@@ -16,10 +16,14 @@
 
 //declare methods here
 
+-(id) initWithHeightandWidth: (int)height width:(int)width;
+-(id) initWithHeight: (int)height;
+-(id) initWithWidth: (int)width;
+
 //these are the setter methods
-- (void)setHeight:(int)newHeight;
-- (void)setWidth:(int)newWidth;
-- (void)setHeight:(int)newHeight width:(int)newWidth;
+- (void)setHeight: (int)newHeight;
+- (void)setWidth: (int)newWidth;
+- (void)setHeight: (int)newHeight width:(int)newWidth;
 
 
 //these are the getter methods

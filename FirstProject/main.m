@@ -161,11 +161,18 @@ int main(int argc, const char * argv[]) {
         [mutableArray insertObject:@"Fourth Object" atIndex:3];
         [mutableArray replaceObjectAtIndex:3 withObject:@"Replaced at index"];
         
-         
         
         for(int i = 0; i < [mutableArray count]; i++){
             NSLog(@"Array items: %@", [mutableArray objectAtIndex:i]);
         }
+        
+        Rectangle *rect2 = [[Rectangle alloc] init];
+        NSLog(@"%@", rect2);
+        
+        //using convenience initializers
+        Rectangle *rect3 = [[Rectangle alloc] initWithHeightandWidth:5 width:10];
+        NSLog(@"%@", rect3);
+        
         
         
     }

@@ -10,6 +10,25 @@
 
 @implementation Rectangle
 
+-(id) initWithHeightandWidth:(int)height width:(int)width{
+    if(self = [super init]){
+        self.height = height;
+        self.width = width;
+    }
+    
+    return self;
+}
+
+-(id) initWithWidth:(int)width{
+    self = [self initWithHeightandWidth:10 width:20];
+    return self;
+}
+
+-(id) initWithHeight:(int)height{
+    self = [self initWithHeightandWidth:10 width:30];
+    return self;
+}
+
 -(id) init{
     /*
      
@@ -55,7 +74,10 @@
 }
 
 - (NSString *) description{
-    return @"This is the description method overridden from the NSObject superclass";
+    NSMutableString *string = [NSMutableString stringWithString:@"Inside the description method\n"];
+    [string appendFormat:@"Height: %d, Width: %d", height,width];
+    
+    return string;
 }
 
 @end
