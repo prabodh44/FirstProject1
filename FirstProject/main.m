@@ -158,6 +158,11 @@ int main(int argc, const char * argv[]) {
         [mutableArray addObject:@"Second Object"];
         [mutableArray addObject:@"Third Object"];
         
+        [mutableArray insertObject:@"Fourth Object" atIndex:3];
+        [mutableArray replaceObjectAtIndex:3 withObject:@"Replaced at index"];
+        
+         
+        
         for(int i = 0; i < [mutableArray count]; i++){
             NSLog(@"Array items: %@", [mutableArray objectAtIndex:i]);
         }

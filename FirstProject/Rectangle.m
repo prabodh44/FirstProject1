@@ -10,6 +10,25 @@
 
 @implementation Rectangle
 
+-(id) init{
+    /*
+     
+     the return type of the init method is id
+     id is a generic object
+     id is used as a return type because
+     the init method can return any type of class
+     
+    */
+    
+    self = [super init]; //initializes all the classes the current class is derived from
+    if(self){
+        self.height = 5;
+        self.width = 6;
+    }
+    
+    return self;
+}
+
 - (void)setHeight:(int)newHeight {
     height = newHeight;
 }
