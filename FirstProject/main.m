@@ -129,13 +129,38 @@ int main(int argc, const char * argv[]) {
         //Aug 17th 2016
         //Fast enumeration(similar to the foreach loop)
         
+        //declaring a temporary NSArray
         NSArray *array = [NSArray arrayWithObjects:@"Prabodh", @"Tuladhar", @"Mitra", @"School", nil];
         for(NSString *string in array){
             NSLog(@"%@",string);
         }
         
+        NSArray *anotherArray = [[NSArray alloc] initWithObjects:@"Tina",@42, @"Prabhat", @86 , nil];
         
-             
+        for(NSString *string in anotherArray){
+            NSLog(@"%@",string);
+        }
+        
+        //declaring a temporary dictionary
+        NSDictionary *animalsDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                        @"Cow", @"Mammal",
+                        @"Shark", @"Fish",
+                        @"Cobra", @"Reptile",
+                        nil];
+        
+        for(NSString *string in animalsDict){
+            NSLog(@"Key : %@ \t Value: %@\n", string, [animalsDict objectForKey:string]);
+        }
+        
+        //declaring a temporay NSMutableArray with initial size 5
+        NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:5];
+        [mutableArray addObject:@"First Object"];
+        [mutableArray addObject:@"Second Object"];
+        [mutableArray addObject:@"Third Object"];
+        
+        for(int i = 0; i < [mutableArray count]; i++){
+            NSLog(@"Array items: %@", [mutableArray objectAtIndex:i]);
+        }
         
         
     }
