@@ -39,8 +39,9 @@
      
     */
     
-    self = [super init]; //initializes all the classes the current class is derived from
-    if(self){
+    //self = [super init]; //initializes all the classes the current class is derived from
+    //the above line can be removed as this method can call the designated initializer
+    if([self initWithHeightandWidth:1 width:1]){
         self.height = 5;
         self.width = 6;
     }
@@ -80,4 +81,13 @@
     return string;
 }
 
+// this is the method of the NSObject
+//which is being overridden
+- (void) dealloc {
+    NSLog(@"When the retain count reaches zerom dealloc is called");
+    NSLog(@"Memory of the object has been released");
+    
+    //[super dealloc];
+    
+}
 @end

@@ -173,6 +173,8 @@ int main(int argc, const char * argv[]) {
         Rectangle *rect3 = [[Rectangle alloc] initWithHeightandWidth:5 width:10];
         NSLog(@"%@", rect3);
         
+        //Memory management
+        NSLog(@"Retain count of rect3: %lu", [rect3 retainCount]);
         
         
     }
