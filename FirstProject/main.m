@@ -10,7 +10,7 @@
 #import "Rectangle.h"
 #import "Computer.h"
 #import "Animals.h"
-
+#import "NSString-Movies.h"
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
 extern int externFirstVar;
@@ -192,13 +192,32 @@ int main(int argc, const char * argv[]) {
         
         //[comp chip];
         
+        //18th Aug 2017
         //Using @property
         Animals *animal = [[Animals alloc] init];
-        animal.age = 8;
+        animal.age = 8; // same as [animal setAge:8]
         animal.height = 9;
         
-        NSLog(@"Animal age: %d " ,[animal age]);
-        NSLog(@"Animal height: %d", [animal height]);
+        int animalAge = animal.age; //same as [animal age]
+        int animalHeight = animal.height;
+        NSLog(@"Animal age: %d " ,animalAge);
+        NSLog(@"Animal height: %d", animalHeight);
+        
+        //Using Categories
+        NSString *movieString = @"Guardians of the galaxy.doc";
+        if([movieString isAMovie]){
+            NSLog(@"It is a movie format");
+        }else{
+            NSLog(@"It is not a not movie format");
+        }
+        
+        NSLog(@"Length of characters: %lu", [movieString length]);
+        
+        NSString *movieWithNumber = @"Star Wars 3";
+        NSString *movieWithoutNumber = [movieWithNumber removeNumbersFromString:movieWithNumber];
+        NSLog(@"%@", movieWithNumber);
+        NSLog(@"%@", movieWithoutNumber)
+        
     }
     return 0;
 }

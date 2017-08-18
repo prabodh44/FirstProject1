@@ -10,6 +10,7 @@
 		764361221F45B19800732883 /* Animals.m in Sources */ = {isa = PBXBuildFile; fileRef = 764361211F45B19800732883 /* Animals.m */; };
 		768857401F4599F40057D475 /* Computer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7688573F1F4599F40057D475 /* Computer.m */; };
 		768857431F459A060057D475 /* Chip.m in Sources */ = {isa = PBXBuildFile; fileRef = 768857421F459A060057D475 /* Chip.m */; };
+		76B3EC9D1F46CBF800A8DC32 /* NSString-Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B3EC9C1F46CBF800A8DC32 /* NSString-Movies.m */; };
 		76B8363A1F441FAC0098155A /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B836391F441FAC0098155A /* Rectangle.m */; };
 		76D131D51F42C0C0000A511D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D131D41F42C0C0000A511D /* main.m */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,8 @@
 		7688573F1F4599F40057D475 /* Computer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Computer.m; sourceTree = "<group>"; };
 		768857411F459A060057D475 /* Chip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chip.h; sourceTree = "<group>"; };
 		768857421F459A060057D475 /* Chip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chip.m; sourceTree = "<group>"; };
+		76B3EC9B1F46CBF800A8DC32 /* NSString-Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-Movies.h"; sourceTree = "<group>"; };
+		76B3EC9C1F46CBF800A8DC32 /* NSString-Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-Movies.m"; sourceTree = "<group>"; };
 		76B836381F441FAC0098155A /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 		76B836391F441FAC0098155A /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
 		76D131D11F42C0C0000A511D /* FirstProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstProject; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +81,8 @@
 				768857421F459A060057D475 /* Chip.m */,
 				764361201F45B19800732883 /* Animals.h */,
 				764361211F45B19800732883 /* Animals.m */,
+				76B3EC9B1F46CBF800A8DC32 /* NSString-Movies.h */,
+				76B3EC9C1F46CBF800A8DC32 /* NSString-Movies.m */,
 			);
 			path = FirstProject;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B3EC9D1F46CBF800A8DC32 /* NSString-Movies.m in Sources */,
 				768857401F4599F40057D475 /* Computer.m in Sources */,
 				768857431F459A060057D475 /* Chip.m in Sources */,
 				76D131D51F42C0C0000A511D /* main.m in Sources */,
