@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Cookie;
 
-
-@interface Person : NSObject{
-    int age;
-    NSString *name;
-    }
+@interface Person : NSObject
 
 @property int age;
-@property NSString *name;
-@property (strong) Occupation *occupation;
+@property (strong, nonatomic)NSString *name;
+@property (copy, nonatomic)NSString *address;
+@property (strong) Cookie *cookie;
+
 @end

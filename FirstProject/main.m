@@ -13,6 +13,7 @@
 #import "NSString-Movies.h"
 #import "Dog.h"
 #import "Person.h"
+#import "Bird.h"
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
 extern int externFirstVar;
@@ -271,6 +272,7 @@ int main(int argc, const char * argv[]) {
             NSLog(@"someOtherDog conforms to the Logging protocol");
         }
         
+        //Key Value Coding
         Person *me = [[Person alloc] init];
         [me setValue:@"Prabodh" forKey:@"name"];
         [me setValue:[NSNumber numberWithInt:24] forKey:@"age"];
@@ -280,18 +282,64 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The value for the name property is %@", [me valueForKey:@"name"]);
         NSLog(@"The value for the age property is %@", [me valueForKey:@"age"]);
         
+        
         //using a dictionary object to pass the parameters at once
         
-        Person *anotherMe = [[Person alloc] init];
-        [anotherMe setValuesForKeysWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+        Person *tina = [[Person alloc] init];
+        [tina setValuesForKeysWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                    @"Tina", @"name",
                                                    [NSNumber numberWithInt:24], @"age", nil]];
         
 //        NSLog(@"My name is %@", [anotherMe valueForKey:@"name"]);
 //        NSLog(@"My age is %@",[anotherMe valueForKey:@"age"]);
         
-        NSDictionary *meDictionary = [anotherMe dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"age", @"name", nil]];
+        NSDictionary *meDictionary = [tina dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"age", @"name", nil]];
         NSLog(@"%@", meDictionary);
+        
+        //using the keypath
+        Person *firstPerson = [[Person alloc] init];
+        NSMutableString *aString = [NSMutableString stringWithFormat:@"hello"];
+        [aString appendString:@"bye "];
+        firstPerson.name = [aString mutableCopy];
+        NSLog(@"%@", firstPerson.name);
+        [aString appendString:@" bob"];
+        NSLog(@"%@", firstPerson.name);
+        
+        NSMutableString *address = [NSMutableString stringWithFormat:@"ktm"];
+        firstPerson.address = address;
+        NSLog(@"%@", firstPerson.address);
+        [address appendString:@" nepal"];
+        NSLog(@"%@", firstPerson.address);
+        
+        
+
+//        firstPerson.name = [firstPerson.name stringByAppendingString:@" kid"];
+//        NSLog(@"%@", firstPerson.name);
+
+//        Person *rahul = [[Person alloc] init];
+//        [rahul setValue:@"Sundae" forKeyPath:@"cookie.name"];
+//        [rahul setValue:@"Rahul" forKey: @"name"];
+//        NSLog(@"Rahul's cookie: %@", [rahul valueForKeyPath:@"cookie.name"]);
+//        NSLog(@"Rahul's name: %@", [rahul valueForKey:@"name"]);
+        
+        
+        //keyValue observing
+        Person *birdWatcher = [[Person alloc] init];
+        Bird *sparrow = [[Bird alloc] init];
+        
+        [sparrow addObserver:birdWatcher
+                  forKeyPath:@"hunger"
+                     options:NSKeyValueObservingOptionNew
+                     context:NULL];
+        
+        
+        sparrow.hunger = 4;
+        sparrow.hunger = 7;
+        
+        
+        [sparrow removeObserver:birdWatcher forKeyPath:@"hunger"];
+       
+
         
     }
     return 0;

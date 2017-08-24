@@ -1,5 +1,5 @@
 //
-//  Occupation.h
+//  Cookie.h
 //  FirstProject
 //
 //  Created by ith on 8/24/17.
@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Occupation : NSObject{
-    NSString *jobName;
+@interface Cookie : NSObject{
+    NSString *name;
 }
 
-@property NSString *jobName;
+@property (copy) NSString *name;
+
 @end

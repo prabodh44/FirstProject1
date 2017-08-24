@@ -1,15 +1,13 @@
 //
-//  Occupation.m
+//  Cookie.m
 //  FirstProject
 //
 //  Created by ith on 8/24/17.
 //  Copyright © 2017 ith. All rights reserved.
 //
 
-#import "Occupation.h"
+#import "Cookie.h"
 
-@implementation Occupation
-@synthesize jobName;
-
-
+@implementation Cookie
+@synthesize name;
 @end
