@@ -12,6 +12,7 @@
 #import "Animals.h"
 #import "NSString-Movies.h"
 #import "Dog.h"
+#import "Person.h"
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
 extern int externFirstVar;
@@ -235,6 +236,8 @@ int main(int argc, const char * argv[]) {
         Animals *newAnimal = [[Animals alloc] init];
         NSLog(@"Animal Description: %@", newAnimal);
         
+        
+        // 21st Aug 2017
         //NSNumber
         
         NSMutableArray *numberArray = [NSMutableArray arrayWithCapacity:4];
@@ -267,6 +270,29 @@ int main(int argc, const char * argv[]) {
         if([someOtherDog conformsToProtocol:@protocol(Logging)]){
             NSLog(@"someOtherDog conforms to the Logging protocol");
         }
+        
+        Person *me = [[Person alloc] init];
+        [me setValue:@"Prabodh" forKey:@"name"];
+        [me setValue:[NSNumber numberWithInt:24] forKey:@"age"];
+        //NSNumber must be passed instead of int because
+        //the setValue parameter id which is a points to a generic object
+        
+        NSLog(@"The value for the name property is %@", [me valueForKey:@"name"]);
+        NSLog(@"The value for the age property is %@", [me valueForKey:@"age"]);
+        
+        //using a dictionary object to pass the parameters at once
+        
+        Person *anotherMe = [[Person alloc] init];
+        [anotherMe setValuesForKeysWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                   @"Tina", @"name",
+                                                   [NSNumber numberWithInt:24], @"age", nil]];
+        
+//        NSLog(@"My name is %@", [anotherMe valueForKey:@"name"]);
+//        NSLog(@"My age is %@",[anotherMe valueForKey:@"age"]);
+        
+        NSDictionary *meDictionary = [anotherMe dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"age", @"name", nil]];
+        NSLog(@"%@", meDictionary);
+        
     }
     return 0;
 }
