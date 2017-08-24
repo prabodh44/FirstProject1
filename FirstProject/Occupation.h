@@ -1,5 +1,5 @@
 //
-//  Occuptation.h
+//  Occupation.h
 //  FirstProject
 //
 //  Created by ith on 8/24/17.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Occuptation : NSObject
+@interface Occupation : NSObject
 
 @end

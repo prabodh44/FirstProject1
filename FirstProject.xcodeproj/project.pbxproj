@@ -14,7 +14,7 @@
 		76B8363A1F441FAC0098155A /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B836391F441FAC0098155A /* Rectangle.m */; };
 		76B91E821F4EA65900FC97B5 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B91E811F4EA65900FC97B5 /* Dog.m */; };
 		76B91E851F4EC87600FC97B5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B91E841F4EC87600FC97B5 /* Person.m */; };
-		76B91E881F4ED1C000FC97B5 /* Occuptation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B91E871F4ED1C000FC97B5 /* Occuptation.m */; };
+		76B91E8B1F4ED37300FC97B5 /* Occupation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B91E8A1F4ED37300FC97B5 /* Occupation.m */; };
 		76D131D51F42C0C0000A511D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D131D41F42C0C0000A511D /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +46,8 @@
 		76B91E811F4EA65900FC97B5 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		76B91E831F4EC87600FC97B5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		76B91E841F4EC87600FC97B5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		76B91E861F4ED1C000FC97B5 /* Occuptation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Occuptation.h; sourceTree = "<group>"; };
-		76B91E871F4ED1C000FC97B5 /* Occuptation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Occuptation.m; sourceTree = "<group>"; };
+		76B91E891F4ED37300FC97B5 /* Occupation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Occupation.h; sourceTree = "<group>"; };
+		76B91E8A1F4ED37300FC97B5 /* Occupation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Occupation.m; sourceTree = "<group>"; };
 		76D131D11F42C0C0000A511D /* FirstProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D131D41F42C0C0000A511D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,8 +98,8 @@
 				76B3EC9C1F46CBF800A8DC32 /* NSString-Movies.m */,
 				76B91E831F4EC87600FC97B5 /* Person.h */,
 				76B91E841F4EC87600FC97B5 /* Person.m */,
-				76B91E861F4ED1C000FC97B5 /* Occuptation.h */,
-				76B91E871F4ED1C000FC97B5 /* Occuptation.m */,
+				76B91E891F4ED37300FC97B5 /* Occupation.h */,
+				76B91E8A1F4ED37300FC97B5 /* Occupation.m */,
 			);
 			path = FirstProject;
 			sourceTree = "<group>";
@@ -161,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B91E8B1F4ED37300FC97B5 /* Occupation.m in Sources */,
 				76B3EC9D1F46CBF800A8DC32 /* NSString-Movies.m in Sources */,
 				768857401F4599F40057D475 /* Computer.m in Sources */,
 				76B91E851F4EC87600FC97B5 /* Person.m in Sources */,
@@ -168,7 +169,6 @@
 				76D131D51F42C0C0000A511D /* main.m in Sources */,
 				76B91E821F4EA65900FC97B5 /* Dog.m in Sources */,
 				764361221F45B19800732883 /* Animals.m in Sources */,
-				76B91E881F4ED1C000FC97B5 /* Occuptation.m in Sources */,
 				76B8363A1F441FAC0098155A /* Rectangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
