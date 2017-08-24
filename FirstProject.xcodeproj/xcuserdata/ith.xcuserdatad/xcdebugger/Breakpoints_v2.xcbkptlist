@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstProject/main.m"
-            timestampString = "524646821.367015"
+            timestampString = "525248467.672538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstProject/main.m"
-            timestampString = "524646821.367015"
+            timestampString = "525248467.672538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstProject/main.m"
-            timestampString = "524646821.367015"
+            timestampString = "525248467.672538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstProject/main.m"
-            timestampString = "524567356.770182"
+            timestampString = "525248467.672538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15">
+            startingLineNumber = "16"
+            endingLineNumber = "16">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -72,11 +72,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FirstProject/main.m"
-            timestampString = "524734473.150257"
+            timestampString = "525248467.672538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "main()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirstProject/main.m"
+            timestampString = "525248467.672538"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>

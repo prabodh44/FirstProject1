@@ -13,7 +13,7 @@
     int height;
     int width;
 }
-
+@property (strong, atomic) NSString *name;
 //declare methods here
 
 -(id) initWithHeightandWidth: (int)height width:(int)width;

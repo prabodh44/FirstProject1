@@ -10,6 +10,16 @@
 
 @implementation Animals
 
+- (NSString *) name{
+    return @"Default name";
+}
 
+- (NSString *) description{
+    NSString *address = nil;
+    _name = @"Hari";
+    NSMutableString *returnString = [[NSMutableString alloc] initWithFormat:@"_name is %@ \n", _name];
+    [returnString appendFormat:@"self.name is %@", self.name];
+    return returnString;
+}
 
 @end

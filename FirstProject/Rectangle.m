@@ -75,8 +75,9 @@
 }
 
 - (NSString *) description{
-    NSMutableString *string = [NSMutableString stringWithString:@"Inside the description method\n"];
-    [string appendFormat:@"Height: %d, Width: %d", height,width];
+    NSMutableString *string = [NSMutableString stringWithString:@"Inside the description method\n "];
+    self.name = [NSString stringWithFormat:@"naame is hari"];
+    [string appendFormat:@"Height: %d, Width: %d name:%@", height,width, self.name];
     
     return string;
 }

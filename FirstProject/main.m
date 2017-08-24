@@ -11,6 +11,7 @@
 #import "Computer.h"
 #import "Animals.h"
 #import "NSString-Movies.h"
+#import "Dog.h"
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
 extern int externFirstVar;
@@ -198,6 +199,7 @@ int main(int argc, const char * argv[]) {
         animal.age = 8; // same as [animal setAge:8]
         animal.height = 9;
         
+        
         int animalAge = animal.age; //same as [animal age]
         int animalHeight = animal.height;
         NSLog(@"Animal age: %d " ,animalAge);
@@ -216,8 +218,55 @@ int main(int argc, const char * argv[]) {
         NSString *movieWithNumber = @"Star Wars 3";
         NSString *movieWithoutNumber = [movieWithNumber removeNumbersFromString:movieWithNumber];
         NSLog(@"%@", movieWithNumber);
-        NSLog(@"%@", movieWithoutNumber)
+        NSLog(@"%@", movieWithoutNumber);
         
+        //Selector
+        NSMutableArray *randNames = [[NSMutableArray alloc] initWithObjects:@"John", @"Doe", @"Amy", @"Chang", nil];
+        SEL message = @selector(addObject:);
+        
+        if([randNames respondsToSelector:message]){
+            [randNames performSelector:message withObject:@"Added name"];
+        }
+        
+        NSLog(@"%@", randNames);
+        NSLog(@"String from selector is %@", NSStringFromSelector(message));
+       
+        
+        Animals *newAnimal = [[Animals alloc] init];
+        NSLog(@"Animal Description: %@", newAnimal);
+        
+        //NSNumber
+        
+        NSMutableArray *numberArray = [NSMutableArray arrayWithCapacity:4];
+        for(int i = 0; i < 4; i++){
+            [numberArray addObject:[NSNumber numberWithInt:i]];
+        }
+        
+        for(int i = 0; i < 4; i++){
+            NSLog(@"%@",[numberArray objectAtIndex:i]);
+        }
+        NSLog(@"The count is %lu",[numberArray count]);
+        
+        NSNumber *n1 = [numberArray objectAtIndex:1];
+        int num1 = [n1 intValue];
+        NSLog(@"%d", num1);
+        
+        //protocols (similar to interfaces)
+        Dog *dog = [[Dog alloc] init];
+        dog.age = 8;
+        [dog log];
+        
+        // id with protocols
+        Dog *newDog = [[Dog alloc] init];
+        newDog.age = 9;
+        id <Logging> someDog = newDog; //id is a generic object pointer. now pointing to newDog
+        //id <Logging> is declaration of a generic object pointer that conforms to the Logging protocol
+        [someDog log];
+        
+        id <Logging> someOtherDog = newDog;
+        if([someOtherDog conformsToProtocol:@protocol(Logging)]){
+            NSLog(@"someOtherDog conforms to the Logging protocol");
+        }
     }
     return 0;
 }
