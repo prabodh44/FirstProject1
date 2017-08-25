@@ -388,6 +388,45 @@ int main(int argc, const char * argv[]) {
         NSArray *rectangleArrayFromData = [NSKeyedUnarchiver unarchiveObjectWithData:rectangleData];
         NSLog(@"%@",rectangleArrayFromData);
         
+        //Block
+        //A block contains a block of code that can be executed
+        //The scope of the block is the function inwhich it is declared
+        
+        int (^myBlock)(void) = ^{
+            return 6;
+        };
+        
+        NSLog(@"The value of the block is %d", myBlock());
+        
+        //block with parameters
+        int (^paraBlock)(int, int) = ^(int num1, int num2){
+            return num1 + num2;
+        };
+        
+        NSLog(@"The sum of paraBlock(5,3) is %d", paraBlock(5,3));
+        NSLog(@"The sum of paraBlock(8,8) is %d", paraBlock(8,8));
+        
+        
+        int notAblockNumber = 7;
+        int (^square) (void) = ^{
+            return notAblockNumber * notAblockNumber;
+        };
+        notAblockNumber = 9;
+        NSLog(@"The answer of the square block is %d", square());
+        //the answer is 49 rather than 81
+        //because the block copies the value that was first changed
+        // and does not allow modification
+        
+        __block int anotherInt = 8;
+        int (^cube) (void) = ^{
+            return anotherInt * anotherInt * anotherInt;
+        };
+        anotherInt = 9;
+        NSLog(@"The answer of the cube block is %d", cube());
+        //answer is 729 instead of 256 because of __block keyword
+        //__block denotes that the values inside the block can be changed
+        
+        //blocks inside methods
         
     }
     return 0;
