@@ -339,7 +339,55 @@ int main(int argc, const char * argv[]) {
         
         [sparrow removeObserver:birdWatcher forKeyPath:@"hunger"];
        
-
+        //22nd August 2017
+        //example of mutableCopy vs copy
+        
+        NSArray *org = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
+        NSMutableArray *cpy = [org copy];
+        
+      //  [cpy removeObject:@"1"]; //cannot perform this operation; copy always returns an immutable object.
+        NSLog(@"%@", cpy);
+        NSMutableArray *mutableCpy = [org mutableCopy];
+        [mutableCpy  removeObject:@"2"];
+        NSLog(@"%@", mutableCpy);
+        
+        //Property List
+        NSString *path = @"propertyList.plist";
+        NSArray *namesArray = [NSArray arrayWithObjects:@"Prabodh", @"Prajula", @"Ashesh", nil];
+        NSDictionary *tryDict = [NSDictionary dictionaryWithObjectsAndKeys:namesArray, @"nameArray",
+                                 @"Another String", @"string", nil];
+        
+        [tryDict writeToFile:path atomically:YES];
+        NSLog(@"File has been created");
+        
+        NSDictionary *newDict = [NSDictionary dictionaryWithContentsOfFile:path];
+        NSLog(@"%@", newDict);
+        
+        //NSData
+        NSArray *dataArray = [NSArray arrayWithObjects:@"First",@"Second", @"Third", nil];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dataArray];
+        [data writeToFile:@"textFile.txt" atomically:YES];
+        
+        NSLog(@"data Array has been written to file");
+        
+        NSData *dataFromFile = [[NSData alloc] initWithContentsOfFile:@"textFile.txt"];
+        NSArray *arrayFromFile = [NSKeyedUnarchiver unarchiveObjectWithData:dataFromFile];
+        NSLog(@"%@", arrayFromFile);
+        
+        //NSData using NSCoding protocol
+        //all objects that conform to the NSCoding protocol can be saved using NSData
+        
+        //saving the contents of the Rectangle Object
+        Rectangle *rectangle1 = [[Rectangle alloc] initWithHeightandWidth:45 width:50];
+        Rectangle *rectangle2 = [[Rectangle alloc] initWithHeightandWidth:40 width:60];
+        
+        NSArray *rectangleArray = [NSArray arrayWithObjects:rectangle1, rectangle2, nil];
+        NSData *rectangleData = [NSKeyedArchiver archivedDataWithRootObject:rectangleArray];
+    
+        
+        NSArray *rectangleArrayFromData = [NSKeyedUnarchiver unarchiveObjectWithData:rectangleData];
+        NSLog(@"%@",rectangleArrayFromData);
+        
         
     }
     return 0;

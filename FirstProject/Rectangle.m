@@ -10,11 +10,27 @@
 
 @implementation Rectangle
 
+- (void) encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeInt:height forKey:@"height"];
+    [aCoder encodeInt:width forKey:@"width"];
+}
+
+- (id) initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if(self){
+        height = [aDecoder decodeIntForKey:@"height"];
+        width = [aDecoder decodeIntForKey:@"width"];
+    }
+    return self;
+}
+
+
 -(id) initWithHeightandWidth:(int)h width:(int)w{
     if(self = [super init]){
         height = h;
         width = w;
     }
+    
     
     return self;
 }

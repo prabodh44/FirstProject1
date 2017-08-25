@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Rectangle : NSObject{
+@interface Rectangle : NSObject <NSCoding>{
     //declare properties here
     int height;
     int width;
