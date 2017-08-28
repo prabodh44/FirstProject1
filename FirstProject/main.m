@@ -14,6 +14,10 @@
 #import "Dog.h"
 #import "Person.h"
 #import "Bird.h"
+#import "JediTemple.h"
+#import "ClassExtension.h"
+#import "Boy.h"
+#import "FileManager.h"
 //an extern keyword is used when a variable has to be in another file
 //where the variable is not defined
 extern int externFirstVar;
@@ -348,8 +352,9 @@ int main(int argc, const char * argv[]) {
       //  [cpy removeObject:@"1"]; //cannot perform this operation; copy always returns an immutable object.
         NSLog(@"%@", cpy);
         NSMutableArray *mutableCpy = [org mutableCopy];
+        NSLog(@"mutable %@", mutableCpy);
         [mutableCpy  removeObject:@"2"];
-        NSLog(@"%@", mutableCpy);
+        NSLog(@"mutable 2 %@", mutableCpy);
         
         //Property List
         NSString *path = @"propertyList.plist";
@@ -427,8 +432,110 @@ int main(int argc, const char * argv[]) {
         //__block denotes that the values inside the block can be changed
         
         //blocks inside methods
+        JediTemple *jediTemple = [[JediTemple alloc] init];
         
-    }
+        [jediTemple enumerateMemberWithBlock:^(NSString *name, int index, BOOL *stop){
+            if([name isEqualToString:@"Obi-Wan"]){
+                NSLog(@"The index is %d", index);
+                NSLog(@"Obi-wan is here");
+                *stop = YES;
+            }else{
+                NSLog(@"%@", name);
+            }
+        }];
+        NSLog(@"dafadfadf");
+        //class extension
+        ClassExtension *myClass = [[ClassExtension alloc] init];
+        //[myClass setName: @"Diana"]; //prints out error since name property is readonly;
+        
+        [myClass log];
+        //[myClass secretMethod] //prints out error since secretMethod is not visible from myClass object
+        
+        //literals
+        
+        NSArray *literalArray = @[@"Prabodh", @"Tuladhar"];
+        //instead of
+        //NSArray *array = [NSArrray arrayWithObjects: ...];
+        NSLog(@"%@", literalArray[0]);
+        
+        NSNumber *literalIntNumber = @14;
+        NSLog(@"%@", literalIntNumber);
+        
+        NSNumber *literalFloatNumber = @3.14f;
+        NSLog(@"%@",literalFloatNumber);
+        
+        NSDictionary *literalDictionary = @{@"Key1" : @"Value1",
+                                            @"Key2" : @"Value2"};
+        NSLog(@"%@", literalDictionary[@"Key1"]);
+        
+        
+        Animals *cat = [[Animals alloc] init];
+        NSString *answer = [[NSString alloc] init];
+        answer = [cat getSizeAndTypeofAnimal:@"grass" heightOfAnimal:3];
+        NSLog(@"The answer is %@", answer);
+        
+
+        //28th Aug 2017
+        //NSPredicate
+        Boy *boy1 = [[Boy alloc] initWithNameAndAge:@"Ram" :180];
+        Boy *boy2 = [[Boy alloc] initWithNameAndAge:@"Shyam" :45];
+        Boy *boy3 = [[Boy alloc] initWithNameAndAge:@"H" :60];
+        Boy *boy4 = [[Boy alloc] initWithNameAndAge:@"Raghu" :4];
+        Boy *boy5 = [[Boy alloc] initWithNameAndAge:@"Raghav" :54];
+        
+        
+        NSArray *boysArray = @[boy1, boy2, boy3, boy4, boy5];
+        
+        //NSSortDescriptor
+        
+        //sort case sensitive
+        NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSArray *sortDescriptor = @[sorter];
+        NSArray *sortedArray = [boysArray sortedArrayUsingDescriptors:sortDescriptor];
+        NSLog(@"%@", sortedArray);
+        
+        
+        //sort case insensitive
+        NSSortDescriptor *anotherSorter = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+        NSArray *anotherDescriptor =  @[anotherSorter];
+        NSArray *anotherSortedArray = [boysArray sortedArrayUsingDescriptors:anotherDescriptor];
+        NSLog(@"%@", anotherSortedArray);
+        
+        //sort using block
+        NSSortDescriptor *blockSorter = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES comparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+            if([obj1 length] < [obj2 length]){
+                return NSOrderedAscending;
+            }
+            
+            return NSOrderedDescending;
+        }];
+        
+        NSArray *blockDescriptor = @[blockSorter];
+        NSArray *blockSortedArray = [boysArray sortedArrayUsingDescriptors:blockDescriptor];
+        NSLog(@"%@", blockSortedArray);
+        
+        
+        //NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"age > 20"];
+        //NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"name == 'Raghav'"];
+        //NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"name CONTAINS[c] 'a'"];
+        NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"name LIKE[c] '*a?'"];
+        for(Boy *b in boysArray){
+            NSLog(@"%d", [predicate1 evaluateWithObject:b]);
+        }
+        
+        NSArray *filteredArray = [boysArray filteredArrayUsingPredicate:predicate1];
+        NSLog(@"%@", filteredArray);
+        
+        //Singleton
+        NSLog(@"%@", [FileManager defaultManager]);
+        NSLog(@"%@", [FileManager defaultManager]);
+        //both point to the same memory location
+        
+        NSLog(@"%@",[FileManager anotherMethod]);
+        NSLog(@"%@",[FileManager anotherMethod]);
+        //both donot point to the same memory location
+        
+        }
     return 0;
 }
 

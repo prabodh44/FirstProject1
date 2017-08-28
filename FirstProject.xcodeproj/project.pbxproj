@@ -17,7 +17,10 @@
 		76B91E8E1F4ED92F00FC97B5 /* Cookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B91E8D1F4ED92F00FC97B5 /* Cookie.m */; };
 		76B91E911F4EF70800FC97B5 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B91E901F4EF70800FC97B5 /* Bird.m */; };
 		76B97AE51F5006ED007C8212 /* JediTemple.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B97AE41F5006ED007C8212 /* JediTemple.m */; };
+		76B97AE81F5023A1007C8212 /* ClassExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B97AE71F5023A1007C8212 /* ClassExtension.m */; };
 		76D131D51F42C0C0000A511D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D131D41F42C0C0000A511D /* main.m */; };
+		76E733C21F53D375009B9730 /* Boy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E733C11F53D375009B9730 /* Boy.m */; };
+		76E733C51F53E758009B9730 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E733C41F53E758009B9730 /* FileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,8 +57,14 @@
 		76B91E901F4EF70800FC97B5 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 		76B97AE31F5006ED007C8212 /* JediTemple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JediTemple.h; sourceTree = "<group>"; };
 		76B97AE41F5006ED007C8212 /* JediTemple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JediTemple.m; sourceTree = "<group>"; };
+		76B97AE61F5023A1007C8212 /* ClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassExtension.h; sourceTree = "<group>"; };
+		76B97AE71F5023A1007C8212 /* ClassExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassExtension.m; sourceTree = "<group>"; };
 		76D131D11F42C0C0000A511D /* FirstProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D131D41F42C0C0000A511D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		76E733C01F53D375009B9730 /* Boy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boy.h; sourceTree = "<group>"; };
+		76E733C11F53D375009B9730 /* Boy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boy.m; sourceTree = "<group>"; };
+		76E733C31F53E758009B9730 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		76E733C41F53E758009B9730 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,10 @@
 			children = (
 				76B91E7F1F4EA42E00FC97B5 /* Logging.h */,
 				76D131D41F42C0C0000A511D /* main.m */,
+				76E733C01F53D375009B9730 /* Boy.h */,
+				76E733C11F53D375009B9730 /* Boy.m */,
+				76B97AE61F5023A1007C8212 /* ClassExtension.h */,
+				76B97AE71F5023A1007C8212 /* ClassExtension.m */,
 				76B836381F441FAC0098155A /* Rectangle.h */,
 				76B836391F441FAC0098155A /* Rectangle.m */,
 				7688573E1F4599F40057D475 /* Computer.h */,
@@ -110,6 +123,8 @@
 				76B91E901F4EF70800FC97B5 /* Bird.m */,
 				76B97AE31F5006ED007C8212 /* JediTemple.h */,
 				76B97AE41F5006ED007C8212 /* JediTemple.m */,
+				76E733C31F53E758009B9730 /* FileManager.h */,
+				76E733C41F53E758009B9730 /* FileManager.m */,
 			);
 			path = FirstProject;
 			sourceTree = "<group>";
@@ -172,15 +187,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B91E911F4EF70800FC97B5 /* Bird.m in Sources */,
+				76E733C21F53D375009B9730 /* Boy.m in Sources */,
 				76B91E8E1F4ED92F00FC97B5 /* Cookie.m in Sources */,
 				76B3EC9D1F46CBF800A8DC32 /* NSString-Movies.m in Sources */,
 				76B97AE51F5006ED007C8212 /* JediTemple.m in Sources */,
+				76E733C51F53E758009B9730 /* FileManager.m in Sources */,
 				768857401F4599F40057D475 /* Computer.m in Sources */,
 				76B91E851F4EC87600FC97B5 /* Person.m in Sources */,
 				768857431F459A060057D475 /* Chip.m in Sources */,
 				76D131D51F42C0C0000A511D /* main.m in Sources */,
 				76B91E821F4EA65900FC97B5 /* Dog.m in Sources */,
 				764361221F45B19800732883 /* Animals.m in Sources */,
+				76B97AE81F5023A1007C8212 /* ClassExtension.m in Sources */,
 				76B8363A1F441FAC0098155A /* Rectangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

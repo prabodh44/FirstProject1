@@ -1,5 +1,5 @@
 //
-//  JediTemple.h
+//  ClassExtension.h
 //  FirstProject
 //
 //  Created by ith on 8/25/17.
@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JediTemple : NSObject
+@interface ClassExtension : NSObject
 
-- (void) enumerateMemberWithBlock: (void (^) (NSString *name, int index, BOOL *stop)) block;
+@property (readonly, copy) NSString *name;
+
+- (void) log;
 @end

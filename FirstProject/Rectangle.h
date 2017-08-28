@@ -31,5 +31,6 @@
 - (int)width;
 
 - (int)areaOfRectangle;
+- (int)newAreaofRectangle;
 
 @end

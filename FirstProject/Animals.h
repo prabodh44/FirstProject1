@@ -18,7 +18,7 @@
 @property int height;
 @property (nonatomic) NSString *name;
 
-
+- (NSString *) getSizeAndTypeofAnimal: (NSString *)food heightOfAnimal:(int)height;
 
 
 
